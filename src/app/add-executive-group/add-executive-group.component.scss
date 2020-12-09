@@ -1,0 +1,19 @@
+.add-exe-group-wrapper{
+    
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 0 calc(50px + 0.35vw);
+
+}
+
+.add-exe-group-container{
+
+    grid-column:2/12;
+
+}
+
+.component-title{
+    // text-align: center;
+
+    padding: 0 0 20px 0;
+}

@@ -1,0 +1,75 @@
+<div class="exeGroup-wrapper">
+  <div class="exeGroup-container">
+
+    <!-- prepare the single excutivesGroup DTO to be updated -->
+    <div class="card my-5" *ngIf="editGroup">
+      <div class="card-body">
+        <h3>
+          Edit Executives group:
+        </h3>
+        <form (ngSubmit)="onSubmit()" #addEGForm="ngForm">
+          <!-- <div class="form-group">
+        <label for="id">ID</label>
+        <input type="number" [(ngModel)]="editExecutivesGroup.id" 
+          class="form-control"
+          id="id"
+          name="id"
+          placeholder="Enter your group Id"
+          required #id="ngModel">
+        <div [hidden]="!id.pristine" class="alert alert-danger">Id is required</div>
+      </div> -->
+          <div>
+            <p>ID: {{executivesGroup.id}}</p>
+          </div>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" [(ngModel)]="executivesGroup.name" class="form-control" id="name" name="name"
+              placeholder="Enter group name" required #name="ngModel">
+            <div [hidden]="!name.pristine" class="alert alert-danger">Name is required</div>
+          </div>
+          <div class="form-group">
+            <label for="version">Version</label>
+            <input type="number" [(ngModel)]="executivesGroup.version" class="form-control" id="version" name="version"
+              placeholder="Enter version" required #version="ngModel">
+            <div [hidden]="!version.pristine" class="alert alert-danger">Version is required</div>
+            <div class="worning-mesage" *ngIf="wrongVersion">
+              <p>This version does not exist. Please enter a correct version.</p>
+            </div>
+          </div>
+          <button type="submit" [disabled]="!addEGForm.form.valid" class="btn btn-info list-inline-item">Submit</button>
+          <button class="btn btn-info list-inline-item" (click)="edit()" *ngIf="editGroup">Cancel</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- ReturnValue for single excutivesGroup DTO view -->
+    <div class="card my-5">
+      <div class="card-body">
+        <h3>
+          Executives group:
+        </h3>
+        <table class="table table-bordered table-striped">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Name</th>
+              <th scope="col">Version</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{{ returnSingleValue.value.id }}</td>
+              <td>{{ returnSingleValue.value.name }}</td>
+              <td>{{ returnSingleValue.value.version }}</td>
+            </tr>
+          </tbody>
+        </table>
+        <button class="btn btn-info" (click)="edit()" *ngIf="!editGroup">Edit
+        </button>
+        <button class="btn btn-info" (click)="edit()" *ngIf="editGroup">Cancel
+        </button>
+      </div>
+    </div>
+
+  </div>
+</div>

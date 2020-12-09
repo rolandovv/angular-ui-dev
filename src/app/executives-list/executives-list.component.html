@@ -1,0 +1,54 @@
+<div class="card my-5">
+  <div class="card-body">
+    <h3>
+      Executives list:
+    </h3>
+    <table class="table table-bordered table-striped" *ngFor="let returnValue of returnValues">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">LastName</th>
+          <th scope="col">FirstName</th>
+          <th scope="col">Initials</th>
+          <th scope="col">Sys initials</th>
+          <th scope="col">Title</th>
+          <th scope="col">PostTitle</th>
+          <th scope="col">Salutation</th>
+          <th scope="col">JobTitle</th>
+          <!-- <th scope="col">OfficeId</th> -->
+          <th scope="col">Version</th>
+          <th scope="col">Executives Group</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let value of returnValue.value" (click)="viewSingleExecutive(value.id)">
+          <td>{{ value.id }}</td>
+          <td>{{ value.firstName }}</td>
+          <td>{{ value.lastName }}</td>
+          <td>{{ value.initials }}</td>
+          <td>{{ value.systemInitials }}</td>
+          <td>{{ value.title }}</td>
+          <td>{{ value.postTitle }}</td>
+          <td>{{ value.salutation }}</td>
+          <td>{{ value.jobTitle }}</td>
+          <!-- <td>{{ value.officeId }}</td> -->
+          <td>{{ value.version }}</td>
+          <td>{{ value.executivesGroup }}</td>
+          <td><button class="btn btn-info">View
+          </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <button  class="btn btn-info" routerLink="/api/addExecutives">Add Executive
+    </button>
+  </div>
+</div>
+
+<!-- could also pass objects as inputs between components for more maintainable code -->
+<!-- <executive *ngFor="let returnValue of returnSingleValues" [returnSingleValue]="returnValue">
+</executive> -->
+
+<!-- <router-outlet>
+</router-outlet> -->

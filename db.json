@@ -1,0 +1,82 @@
+{
+  "executiveGroups": [
+    {
+      "id": 1,
+      "name": "Directors & others",
+      "version": 1
+    },
+    {
+      "id": 2,
+      "name": "implementation",
+      "version": 1
+    },
+    {
+      "id": 3,
+      "name": "Pre-Sales",
+      "version": 1
+    },
+    {
+      "id": 4,
+      "name": "Sales",
+      "version": 2
+    }
+  ],
+  "executives": [
+    {
+      "id": 123,
+      "lastName": "Andrews",
+      "firstName": "Stephen",
+      "initials": "StAn",
+      "systemInitials": "SA",
+      "title": "Mr",
+      "postTitle": "CEO",
+      "salutation": "Mr.Andrews",
+      "jobTitle": "Eng",
+      "version": 2,
+      "executivesGroup": "Directors & others"
+    },
+    {
+      "id": 124,
+      "lastName": "Brown",
+      "firstName": "John",
+      "initials": "BrJo",
+      "systemInitials": "BJ",
+      "title": "Mr",
+      "postTitle": "COO",
+      "salutation": "Mr.Brown",
+      "jobTitle": "Eng",
+      "version": 1,
+      "executivesGroup": "Sales"
+    },
+    {
+      "id": 125,
+      "lastName": "Cooper",
+      "firstName": "Steven",
+      "initials": "CoSt",
+      "systemInitials": "CS",
+      "title": "Mr",
+      "postTitle": "CXO",
+      "salutation": "Mr.Cooper",
+      "jobTitle": "Soft Eng",
+      "version": 1,
+      "executivesGroup": "Implemetation"
+    },
+    {
+      "id": 126,
+      "lastName": "Doe",
+      "firstName": "John",
+      "initials": "DoJo",
+      "systemInitials": "DJ",
+      "title": "Mr",
+      "postTitle": "CFO",
+      "salutation": "Mr.Doe",
+      "jobTitle": "Eng",
+      "version": 2,
+      "executivesGroup": "Pre-Sales"
+    }
+  ],
+  "resultCode": [
+    0
+  ],
+  "messages": []
+}
